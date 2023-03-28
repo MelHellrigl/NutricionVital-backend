@@ -1,6 +1,7 @@
 import express from 'express';
 import { connectToDB } from './db/connection.js';
 import productoRoutes from './routes/Productos.js';
+import planesRoutes from './routes/Planes.js';
 import * as dotenv from 'dotenv';
 import bodyParser from 'body-parser';
 
@@ -14,6 +15,7 @@ app.get('/', (req, res) => {
 });
 app.use(bodyParser.json());
 app.use('/producto', productoRoutes);
+app.use('/plan', planesRoutes);
 
 app.listen(PORT, () => {
 	connectToDB();

@@ -60,15 +60,18 @@ export const eliminarProducto = async (req, res) => {
 // Editar un producto
 export const editarProducto = async (req, res) => {
 	const { id } = req.params;
+	const { nuevaData } = req.body;
+
 	if (!id) return res.status(400).send({ response: false, payoad: 'Falta algún dato' });
 	try {
-		const producto = await Producto.findByIdAndUpdate(id);
-		if (!producto)
+		const productoActualizado = await Producto.findByIdAndUpdate({ _id: id }, nuevaData);
+
+		if (!productoActualizado)
 			return res
 				.status(400)
 				.send({ response: false, payload: 'No se encontró el producto solicitado' });
 		return res
-			.status(204)
+			.status(200)
 			.send({ response: true, payload: 'Se actualizó el producto correctamente.' });
 	} catch (error) {
 		console.log(`Error editando producto ${error}`);
