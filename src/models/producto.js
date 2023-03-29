@@ -7,6 +7,7 @@ const productoSchema = new Schema({
 	disponibles: { type: Number },
 	imagen: { type: String, required: true },
 	fecha_publicacion: { type: Date, default: Date.now },
+	peso: { type: Number, required: true },
 });
 
 export default model('Producto', productoSchema);
