@@ -1,4 +1,3 @@
-import localidades from '../localidades.json' assert { type: 'json' };
 import { getCosto } from '../utils/table.js';
 
 // Se obtiene la Localidad mediante el Codigo Postal ingresado
