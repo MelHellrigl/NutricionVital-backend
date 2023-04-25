@@ -71,8 +71,8 @@ function getPesoEnvio(peso) {
 	options.sort(compareNumbers);
 	let option;
 	for (let i = 0; i < options.length; i++) {
-		if (Number(options[i]) > peso) {
-			option = Number(options[i - 1]);
+		if (Number(options[i]) >= peso) {
+			option = Number(options[i]);
 			break;
 		}
 	}
