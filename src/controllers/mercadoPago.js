@@ -5,8 +5,7 @@ const checkOutController = (req, res) => {
 		access_token: 'TEST-6460209993301768-033010-3d163436d7678dccc0e0fd225b6846f5-97199894',
 	});
 
-	const itemsCompra = req.body;
-	console.log(itemsCompra);
+	const { itemsCompra } = req.body;
 
 	const preference = {
 		binary_mode: true,
