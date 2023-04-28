@@ -18,7 +18,7 @@ const checkOutController = (req, res) => {
 		back_urls: {
 			failure: 'http://localhost:5173',
 			pending: 'http://localhost:5173',
-			success: 'http://localhost:5173',
+			success: 'http://localhost:5173/sct/pagos/exito',
 		},
 		auto_return: 'approved',
 	};
