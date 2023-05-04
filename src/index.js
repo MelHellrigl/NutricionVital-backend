@@ -4,6 +4,7 @@ import productoRoutes from './routes/Productos.js';
 import enviosRoutes from './routes/Envios.js';
 import planesRoutes from './routes/Planes.js';
 import mercadoPagoRoutes from './routes/MercadoPago.js';
+import comprobantesRoutes from './routes/Comprobantes.js';
 import * as dotenv from 'dotenv';
 import bodyParser from 'body-parser';
 import cors from 'cors';
@@ -36,6 +37,7 @@ app.use('/producto', productoRoutes);
 app.use('/envios', enviosRoutes);
 app.use('/plan', planesRoutes);
 app.use('/pago', mercadoPagoRoutes);
+app.use('/comprobantes', comprobantesRoutes);
 
 app.listen(PORT, () => {
 	connectToDB();
