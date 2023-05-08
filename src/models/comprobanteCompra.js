@@ -24,6 +24,11 @@ const comprobanteSchema = new Schema({
 		required: true,
 		enum: ['EFECTIVO', 'TRANSFERENCIA', 'MERCADOPAGO'],
 	},
+
+	mercadoPago: {
+		status: { type: String },
+		payment_id: { type: Number },
+	},
 });
 
 export default model('Comprobante', comprobanteSchema);
