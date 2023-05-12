@@ -143,7 +143,7 @@ export const template = ({ title, description, mercadopago, _doc: compra }) => {
   <td align="center" valign="top" style="padding:0;Margin:0;width:500px">
   <table cellpadding="0" cellspacing="0" width="100%" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:separate;border-spacing:0px;border-radius:49px 49px 0 0;background-color:#b2222d" bgcolor="#b2222d" role="presentation">
   <tr>
-  <td align="center" style="padding:0;Margin:0;font-size:0px"><a target="_blank" href="https://www.linkedin.com/in/matiasgstrafacedev/" style="mso-line-height-rule:exactly;text-decoration:underline;color:#081D36;font-size:18px"><img class="adapt-img" src="https://ggeles.stripocdn.email/content/guids/CABINET_6bbc7bd7cf14619eb134fa657edcd05745c6e432cbe5e847c93ce2687266cdf2/images/primernutricionistaescribiendoreceta.jpg" alt="Nutricion Vital img" style="display:block;font-size:18px;border:0;outline:none;text-decoration:none;border-radius:49px 49px 0px 0px" title="Merry Christmas" width="500"></a></td>
+  <td align="center" style="padding:0;Margin:0;font-size:0px"><a target="_blank" href="https://www.linkedin.com/in/matiasgstrafacedev/" style="mso-line-height-rule:exactly;text-decoration:underline;color:#081D36;font-size:18px"><img class="adapt-img" src="https://ggeles.stripocdn.email/content/guids/CABINET_6bbc7bd7cf14619eb134fa657edcd05745c6e432cbe5e847c93ce2687266cdf2/images/primernutricionistaescribiendoreceta.jpg" alt="Nutricion Vital img" style="display:block;font-size:18px;border:0;outline:none;text-decoration:none;border-radius:49px 49px 0px 0px" title="Nutricion Vital img" width="500"></a></td>
   </tr>
   </table></td>
   </tr>
@@ -193,8 +193,9 @@ export const template = ({ title, description, mercadopago, _doc: compra }) => {
   <tr>
   <td align="center" style="padding:0;Margin:0"><h1 style="Margin:0;font-family:Montserrat, helvetica, arial, sans-serif;mso-line-height-rule:exactly;letter-spacing:0;font-size:18px;font-style:120%;font-weight:normal;line-height:22px;color:#081D36"><strong>Elementos comprados</strong></h1></td>
   </tr>
-  ${carrito.map(
-		(producto) => `<tr>
+  ${carrito
+		.map(
+			(producto) => `<tr>
   <td align="center" style="padding:0;Margin:0;font-size:0px"><img class="adapt-img" src="https://ggeles.stripocdn.email/content/guids/CABINET_bfc47da7313b8acfe90c4f386d8c847445308ace955e75f2ed34568b18e8ffea/images/packagesolid24.png" alt style="display:block;font-size:18px;border:0;outline:none;text-decoration:none" width="24"></td>
   </tr>
   <tr>
@@ -212,7 +213,8 @@ export const template = ({ title, description, mercadopago, _doc: compra }) => {
 		producto.precio
 	}</p></td>
   </tr>`
-	)}
+		)
+		.join('')}
   </table></td>
   </tr>
   </table></td>
