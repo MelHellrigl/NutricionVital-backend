@@ -1,8 +1,13 @@
 import mercadopago from 'mercadopago';
 
+import * as dotenv from 'dotenv';
+
 const checkOutController = (req, res) => {
+	dotenv.config();
+	const TOKEN = process.env.MP_ACCESS_TOKEN;
+
 	mercadopago.configure({
-		access_token: 'TEST-6460209993301768-033010-3d163436d7678dccc0e0fd225b6846f5-97199894',
+		access_token: TOKEN,
 	});
 
 	const { itemsCompra } = req.body;
