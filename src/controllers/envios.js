@@ -15,8 +15,11 @@ export const obtenerLocalidad = async (req, res) => {
 
 export const obtenerCostoEnvio = async (req, res) => {
 	const { provincia, peso, retira } = req.body;
-	if (!provincia || !peso) {
+	if (!provincia || peso === undefined) {
 		return res.status(404).send('Falta algún dato para obtener el costo de envío.');
+	}
+	if (peso === 0) {
+		return res.status(200).send({ response: 0 });
 	}
 	try {
 		const costoEnvio = getCosto(provincia, peso, retira);
