@@ -39,7 +39,7 @@ export async function enviarCompraIngresada(compra) {
 	try {
 		const mensaje = {
 			from: 'nutricionvitaldb@gmail.com',
-			to: 'nutricionvitaldb@gmail.com',
+			to: 'licdeborapaiva@gmail.com',
 			subject: 'Compra en proceso || Nutrición Vital',
 			html: template({
 				...compra,
